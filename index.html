@@ -3,209 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NoteX – Effortless Exam Preparation</title>
+<title>NoteX</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #f5f7fb;
+    background: #f4f6fb;
     color: #1e1e2f;
 }
-header {
-    background: linear-gradient(135deg, #4e73ff, #6f42c1);
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-}
-header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-header p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: auto;
-}
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: white;
-    color: #4e73ff;
-    border-radius: 25px;
-    font-weight: 600;
-    text-decoration: none;
-}
+
 section {
     padding: 60px 20px;
     max-width: 1100px;
     margin: auto;
 }
-.section-title {
+
+h2 {
     text-align: center;
     margin-bottom: 40px;
 }
+
+/* FEATURE GRID */
 .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
 }
+
+/* CARD DESIGN */
 .card {
+    position: relative;
     background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.card h3 {
-    margin: 0;
-}
-
-.card p {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card:hover p {
-    opacity: 1;
-    max-height: 200px;
-    margin-top: 10px;
-}
-
-}
-.pricing {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-.price-card {
-    background: white;
-    padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    width: 300px;
-    text-align: center;
+    height: 180px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    cursor: pointer;
 }
-.price-card h3 {
-    margin-top: 0;
+
+/* TITLE (always visible) */
+.card h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    z-index: 2;
 }
-.price {
-    font-size: 2rem;
-    margin: 10px 0;
-    color: #4e73ff;
-}
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #1e1e2f;
+
+/* HOVER OVERLAY */
+.card .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4e73ff, #6f42c1);
     color: white;
-}
-.highlight {
-    color: #6f42c1;
-    font-weight: 600;
-}
-</style>
-</head>
-<body>
-
-<header>
-    <h1>NoteX</h1>
-    <p>Tired of going through hours of videos and taking down notes?  
-    Introducing NoteX – the effortless and ultimate tool to help in exam preparation.</p>
-    <a href="#pricing" class="btn">Get Started</a>
-</header>
-
-<section>
-    <h2 class="section-title">Core Features</h2>
-    <div class="features">
-        <div class="card">
-            <h3>NotePad Pro Compatible</h3>
-            <p>Works seamlessly with the portable NotePad Pro, fitted with a memory card to store all your carefully-crafted notes.</p>
-        </div>
-        <div class="card">
-            <h3>Whiteboard</h3>
-            <p>Plan projects, structure essays, draw diagrams or create mind maps effortlessly.</p>
-        </div>
-        <div class="card">
-            <h3>Aurealia AI – “Write” Feature</h3>
-            <p>Your AI helper to structure email drafts, essays or project pitches with clarity and precision.</p>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2 class="section-title">NoteX+</h2>
-    <div class="features">
-        <div class="card">
-            <h3>Smart Flashcards</h3>
-            <p>Audrey analyzes notes or videos to automatically generate effective flashcards.</p>
-        </div>
-        <div class="card">
-            <h3>Live Audio Transcription</h3>
-            <p>Record live audio that is instantly transcribed and summarized.</p>
-        </div>
-        <div class="card">
-            <h3>Plagiarism Checker & Humanizer</h3>
-            <p>Ensure originality and refine tone effortlessly.</p>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2 class="section-title">NoteX++ – The Ultimate Upgrade</h2>
-    <div class="features">
-        <div class="card">
-            <h3>Grade-Based Flashcards</h3>
-            <p>Create flashcards instantly by specifying grade level and chapter.</p>
-        </div>
-        <div class="card">
-            <h3>Model & Practice Papers</h3>
-            <p>Generate test papers for Olympiads, term-end exams and classroom assessments.</p>
-        </div>
-        <div class="card">
-            <h3>Structured Lecture Notes</h3>
-            <p>Convert classroom recordings into easy-to-revise structured notes.</p>
-        </div>
-        <div class="card">
-            <h3>Digital Flashcard Maker</h3>
-            <p>Manually create flashcards with personalized repetition of challenging concepts.</p>
-        </div>
-    </div>
-</section>
-
-<section id="pricing">
-    <h2 class="section-title">Pricing</h2>
-    <div class="pricing">
-        <div class="price-card">
-            <h3>1 Month Plan</h3>
-            <div class="price">₹199</div>
-            <p>Access to NoteX features</p>
-        </div>
-        <div class="price-card">
-            <h3>3 Month Plan</h3>
-            <div class="price">₹499</div>
-            <p>Save more with extended access</p>
-        </div>
-    </div>
-    <p style="text-align:center; margin-top:20px;">
-        <span class="highlight">30% discount for all Deens Academy students</span>
-    </p>
-</section>
-
-<footer>
-    <p>What you can experience with NoteX+ is just the beginning of what this app is capable of.</p>
-    <p>© 2026 NoteX. All rights reserved.</p>
-</footer>
-
-</body>
-</html>
+    padding: 25px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    display
