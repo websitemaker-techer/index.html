@@ -56,6 +56,31 @@ section {
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card h3 {
+    margin: 0;
+}
+
+.card p {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card:hover p {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+}
+
 }
 .pricing {
     display: flex;
